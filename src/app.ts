@@ -4,7 +4,7 @@ import bodyParser from 'body-parser';
 import dotenv from 'dotenv';
 import chalk from 'chalk'; // Alterado para `import`
 
-import userRoutes from './routes/userRoutes';
+import r1Routes from './routes/r1_routes';
 
 dotenv.config();
 
@@ -15,7 +15,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // Rotas
-app.use('/api', userRoutes);
+app.use('/api', r1Routes);
 
 // Iniciar servidor
 const PORT = process.env.PORT || 3000;
